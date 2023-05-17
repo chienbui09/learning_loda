@@ -6,6 +6,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class ThymeleafMain {
     public static void main(String[] args) {
-        SpringApplication.run(ThymeleafMain.class);
+        SpringApplication.run(ThymeleafMain.class,args);
     }
 }
