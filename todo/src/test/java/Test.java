@@ -1,0 +1,4 @@
+
+@Run
+public class Test {
+}
