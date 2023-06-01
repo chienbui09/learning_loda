@@ -11,25 +11,33 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+import java.util.Collections;
+
 @Configuration
 @EnableSwagger2
 public class Swagger2Config {
     @Bean
-    public Docket api() {
-        return new Docket(DocumentationType.SWAGGER_2).select()
-                .apis(RequestHandlerSelectors.basePackage("me.loda.spring.swagger.controller"))
-                .paths(PathSelectors.regex("/.*"))
+    public Docket docket(){
+        final Contact contact = new Contact(
+                "Bui Duc Chien",
+                null,
+                "buiducchien241125@gmail.com"
+        );
+        final ApiInfo apiInfo = new ApiInfo(
+                "Application",
+                "demo",
+                "1.0.0",
+                "git-link",
+                contact,
+                "null",
+                "null",
+                Collections.emptyList()
+        );
+        return new Docket(DocumentationType.SWAGGER_2)
+                .select()
+                .apis(RequestHandlerSelectors.any())
+                .paths(PathSelectors.any())
                 .build()
-                .apiInfo(apiEndPointsInfo());
-    }
-
-    private ApiInfo apiEndPointsInfo() {
-        return new ApiInfoBuilder().title("Spring Boot REST API")
-                .description("Employee Management REST API")
-                .contact(new Contact("loda", "https://loda.me/", "loda.namnh@gmail.com"))
-                .license("Apache 2.0")
-                .licenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html")
-                .version("1.0.0")
-                .build();
+                .apiInfo(apiInfo);
     }
 }
