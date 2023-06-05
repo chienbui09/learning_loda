@@ -22,6 +22,7 @@
         <module>Listener</module>
         <module>swagger</module>
         <module>swagger3</module>
+        <module>jpa-pageble</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
@@ -75,6 +76,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
             <version>2.7.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
 
     </dependencies>
