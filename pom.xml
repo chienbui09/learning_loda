@@ -24,6 +24,7 @@
         <module>swagger3</module>
         <module>jpa-pageble</module>
         <module>jpa-criterial</module>
+        <module>java-sort</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
