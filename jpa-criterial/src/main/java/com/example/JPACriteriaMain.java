@@ -4,8 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ThymeleafMain {
+public class JPACriteriaMain {
     public static void main(String[] args) {
-        SpringApplication.run(ThymeleafMain.class,args);
+        SpringApplication.run(JPACriteriaMain.class,args);
     }
 }
