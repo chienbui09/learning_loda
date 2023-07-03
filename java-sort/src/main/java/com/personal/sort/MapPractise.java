@@ -1,4 +1,4 @@
-package com.personal;
+package com.personal.sort;
 
 import java.util.HashMap;
 import java.util.Map;

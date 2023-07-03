@@ -1,4 +1,0 @@
-
-@Run
-public class Test {
-}

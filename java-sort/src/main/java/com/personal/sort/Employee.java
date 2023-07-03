@@ -1,4 +1,4 @@
-package com.personal;
+package com.personal.sort;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

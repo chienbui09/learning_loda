@@ -10,14 +10,13 @@
     </parent>
     <groupId>com.example</groupId>
     <artifactId>learning_loda</artifactId>
-    <version>${project.version}</version>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>learning_loda</name>
     <description>learning_loda</description>
     <modules>
         <module>thymeleaf</module>
         <module>todo</module>
-        <module>RxJava</module>
         <module>RxJava</module>
         <module>Listener</module>
         <module>swagger</module>

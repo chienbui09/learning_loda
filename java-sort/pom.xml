@@ -11,6 +11,7 @@
 
     <groupId>com.personal</groupId>
     <artifactId>java-sort</artifactId>
+    <packaging>jar</packaging>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
