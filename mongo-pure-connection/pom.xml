@@ -18,24 +18,41 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver -->
-<!--        <dependency>-->
-<!--            <groupId>org.mongodb</groupId>-->
-<!--            <artifactId>mongo-java-driver</artifactId>-->
-<!--            <version>3.12.11</version>-->
-<!--        </dependency>-->
-        <dependency>
-            <groupId>org.mongodb</groupId>
-            <artifactId>mongodb-driver-sync</artifactId>
-            <version>4.6.1</version>
-        </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.mongodb</groupId>-->
-<!--            <artifactId>mongodb-crypt</artifactId>-->
-<!--            <version>${mongodb-crypt.version}</version>-->
-<!--        </dependency>-->
-
-    </dependencies>
+        <dependencies>
+    <!--         https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver -->
+            <dependency>
+                <groupId>org.mongodb</groupId>
+                <artifactId>mongo-java-driver</artifactId>
+                <version>3.12.11</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-data-jpa</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+    <!--        <dependency>-->
+    <!--            <groupId>org.mongodb</groupId>-->
+    <!--            <artifactId>mongodb-driver-sync</artifactId>-->
+    <!--            <version>4.6.1</version>-->
+    <!--        </dependency>-->
+        </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.0.1.RELEASE</version>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.springframework.boot</groupId>
+                            <artifactId>spring-boot-starter-data-jpa</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
