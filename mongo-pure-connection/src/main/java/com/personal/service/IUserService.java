@@ -7,7 +7,7 @@ import java.util.List;
 public interface IUserService {
     User getUserByfullName(String fullName);
 
-    List<User> getUserByAge(String gender);
+    List<User> getUserByGender(String gender);
 
     List<User> getUserByTextSearch(String fullName);
 }
