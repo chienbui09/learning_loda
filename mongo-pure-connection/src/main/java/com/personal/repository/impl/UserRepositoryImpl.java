@@ -35,8 +35,11 @@ public class UserRepositoryImpl implements IUserRepository {
 
     @Override
     public List<User> findByFullName(String fullName) {
-
-        return null;
+        List<User> users = new ArrayList<>();
+        getUserCollection().find(
+                userBuilder.getFullNameEqBuilder(fullName)
+        ).into(users);
+        return users;
     }
 
     @Override
@@ -50,10 +53,9 @@ public class UserRepositoryImpl implements IUserRepository {
 
     @Override
     public List<User> findByGender(String gender) {
-        List<Document> usersByGender = new ArrayList<>();
         List<User> users = new ArrayList<>();
         getUserCollection().find(
-                        userBuilder.getFullNameEqBuilder(gender)
+                        userBuilder.getGenderEqBuilder(Integer.valueOf(gender))
                 ).map(document -> GsonUtil.fromJson(GsonUtil.toJson(document), User.class))
                         .iterator().forEachRemaining(users::add);
         return users;
