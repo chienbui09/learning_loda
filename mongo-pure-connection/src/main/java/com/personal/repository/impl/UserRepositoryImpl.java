@@ -46,7 +46,7 @@ public class UserRepositoryImpl implements IUserRepository {
     public List<User> findByfullNameTextSearch(String fullName) {
         List<User> users = new ArrayList<>();
         getUserCollection().find(
-                userBuilder.getFullNameSearchBuilder(fullName.split(" "))
+                userBuilder.getFullNameSearchBuilder(false,fullName.split(" "))
         ).into(users);
         return users;
     }
