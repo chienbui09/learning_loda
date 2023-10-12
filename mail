@@ -1,0 +1,23 @@
+Kính gửi anh Quân, anh Giang,
+
+
+
+Team đã thực hiện deploy  Nâng cấp tính năng test tự động text to intent trên chatbot platform vào lúc 17h ngày 12/10/2023, kết quả thực hiện như sau:
+
+- Phạm vi: 
+
+    Nâng cấp tính năng Test trên Chatbot Platform để bổ sung thêm trường câu trả lời mong muốn khi import tập câu hỏi test.
+
+    Tính năng này cho phép import một tập các câu hỏi vào và hệ thống sẽ gọi tới các module của bot để trả về thông tin tương ứng là câu hỏi ấy thuộc về intent nào, kết quả trả về ra sao, đánh giá đúng sai so với KB ban đầu
+
+- Đã thực hiện kiểm thử với kịch bản UAT(đính kèm theo mã tờ trình: 14572449)
+
+- Kết quả: Upcode thành công.
+
+
+
+
+
+Trân trọng.
+
+Bùi Đức Chiến.
