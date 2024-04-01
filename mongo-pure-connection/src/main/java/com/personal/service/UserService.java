@@ -20,7 +20,13 @@ public class UserService implements IUserService{
     }
 
     @Override
-    public List<User> getUserByAge(String gender) {
+    public List<User> getUsersByfullName(String fullName) {
+        List<User> byFullName = userRepository.findByFullName(fullName);
+        return byFullName;
+    }
+
+    @Override
+    public List<User> getUserByGender(String gender) {
         List<User> byGender = userRepository.findByGender(gender);
         return byGender;
     }
